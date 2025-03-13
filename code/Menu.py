@@ -2,14 +2,14 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
+from code.Const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_ORANGE2
 
 
 class Menu:
 
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/Menu.png')
+        self.surf = pygame.image.load('./asset/Menu.png').convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
@@ -20,14 +20,14 @@ class Menu:
         while True:
             # Draw Images
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(70, "Dragon", COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 80))
-            self.menu_text(70, "Chase", COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 130))
+            self.menu_text(100, "Dragon", COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 140))
+            self.menu_text(100, "Chase", COLOR_ORANGE, text_center_pos=((WIN_WIDTH / 2), 200))
 
             for i in range (len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(25, MENU_OPTION[i], COLOR_YELLOW, text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(35, MENU_OPTION[i], COLOR_ORANGE2, text_center_pos=((WIN_WIDTH / 2), 280 + 30 * i))
                 else:
-                    self.menu_text(25, MENU_OPTION[i], COLOR_WHITE, text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
+                    self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, text_center_pos=((WIN_WIDTH / 2), 280 + 30 * i))
             pygame.display.flip()
 
             # Check for all events
