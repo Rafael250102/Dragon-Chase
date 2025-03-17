@@ -6,7 +6,7 @@ from datetime import datetime
 from code.DBProxy import DBProxy
 from pygame import Surface, Rect, KEYDOWN, K_RETURN, K_BACKSPACE, K_ESCAPE
 from pygame.font import Font
-from code.Const import C_ORANGE, C_WHITE, C_ORANGE2, C_YELLOW, SCORE_POS, MENU_OPTION
+from code.Const import C_ORANGE, C_ORANGE2, C_ORANGE3, C_WHITE, C_YELLOW, SCORE_POS, MENU_OPTION
 
 class Score:
 
@@ -38,7 +38,7 @@ class Score:
                 else:
                     score = player_score[1]
                     text = 'INSERT PLAYER 2 NAME (4 CHARACTERS):'
-            self.score_text(35, text, C_WHITE, SCORE_POS['ENTER NAME'])
+            self.score_text(35, text, C_ORANGE2, SCORE_POS['ENTER NAME'])
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -54,7 +54,7 @@ class Score:
                     else:
                         if len(name) < 4:
                             name += event.unicode
-            self.score_text(35, name, C_WHITE, SCORE_POS['NAME'])
+            self.score_text(35, name, C_ORANGE3, SCORE_POS['NAME'])
             pygame.display.flip()
             pass
 
@@ -70,7 +70,7 @@ class Score:
 
         for player_score in list_score:
             id_, name, score, date = player_score
-            self.score_text(30, f'           {name}              {score :05d}           {date} ', C_WHITE,
+            self.score_text(30, f'           {name}              {score :05d}           {date} ', C_ORANGE3,
                             SCORE_POS[list_score.index(player_score)])
         while True:
             for event in pygame.event.get():

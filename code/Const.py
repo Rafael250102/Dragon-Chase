@@ -4,6 +4,7 @@ from pygame.examples.grid import WINDOW_WIDTH
 #C
 C_ORANGE = (255, 111, 10)
 C_ORANGE2 = (255,127,39)
+C_ORANGE3 = (255, 147, 73)
 C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 255, 128)
 C_GREEN = (0, 128, 0)
@@ -29,21 +30,17 @@ ENTITY_SPEED = {
     'Level3Bg1': 1,
     'Level3Bg2': 2,
     'Level3Bg3': 3,
-    'Level3Bg4': 4,
-    'Level3Bg5': 5,
-    'Level3Bg6': 6,
-    'Level3Bg7': 7,
-    'Level3Bg8': 8,
-    'Level3Bg9': 9,
     'Level3Bg10': 10,
-    'Player1' : 3,
+    'Player1': 3,
     'Player1Shot': 2,
-    'Player2' : 3,
+    'Player2': 3,
     'Player2Shot': 2,
-    'Enemy1' : 1,
-    'Enemy1Shot': 3,
-    'Enemy2' : 2,
+    'Enemy1': 1,
+    'Enemy1Shot': 5,
+    'Enemy2': 2,
     'Enemy2Shot':4,
+    'Enemy3': 3,
+    'Enemy3Shot': 5,
 }
 
 ENTITY_HEALTH = {
@@ -64,21 +61,16 @@ ENTITY_HEALTH = {
     'Level3Bg1': 999,
     'Level3Bg2': 999,
     'Level3Bg3': 999,
-    'Level3Bg4': 999,
-    'Level3Bg5': 999,
-    'Level3Bg6': 999,
-    'Level3Bg7': 999,
-    'Level3Bg8': 999,
-    'Level3Bg9': 999,
-    'Level3Bg10': 999,
     'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
     'Player2Shot': 1,
-    'Enemy1': 50,
+    'Enemy1': 60,
     'Enemy1Shot': 1,
-    'Enemy2': 60,
+    'Enemy2': 70,
     'Enemy2Shot': 1,
+    'Enemy3': 80,
+    'Enemy3Shot': 1,
 }
 
 ENTITY_DAMAGE = {
@@ -99,21 +91,16 @@ ENTITY_DAMAGE = {
     'Level3Bg1': 0,
     'Level3Bg2': 0,
     'Level3Bg3': 0,
-    'Level3Bg4': 0,
-    'Level3Bg5': 0,
-    'Level3Bg6': 0,
-    'Level3Bg7': 0,
-    'Level3Bg8': 0,
-    'Level3Bg9': 0,
-    'Level3Bg10': 0,
     'Player1': 1,
     'Player1Shot': 25,
     'Player2': 1,
     'Player2Shot': 25,
     'Enemy1': 1,
-    'Enemy1Shot': 20,
+    'Enemy1Shot': 30,
     'Enemy2': 1,
-    'Enemy2Shot': 30,
+    'Enemy2Shot': 40,
+    'Enemy3': 1,
+    'Enemy3Shot': 50,
 }
 
 ENTITY_SCORE = {
@@ -134,13 +121,6 @@ ENTITY_SCORE = {
     'Level3Bg1': 0,
     'Level3Bg2': 0,
     'Level3Bg3': 0,
-    'Level3Bg4': 0,
-    'Level3Bg5': 0,
-    'Level3Bg6': 0,
-    'Level3Bg7': 0,
-    'Level3Bg8': 0,
-    'Level3Bg9': 0,
-    'Level3Bg10': 0,
     'Player1': 0,
     'Player1Shot': 0,
     'Player2': 0,
@@ -149,6 +129,8 @@ ENTITY_SCORE = {
     'Enemy1Shot': 0,
     'Enemy2': 125,
     'Enemy2Shot': 0,
+    'Enemy3': 150,
+    'Enemy3Shot': 0,
 }
 
 ENTITY_SHOT_DELAY = {
@@ -156,6 +138,7 @@ ENTITY_SHOT_DELAY = {
     'Player2': 10,
     'Enemy1': 50,
     'Enemy2': 150,
+    'Enemy3': 150,
 }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -193,7 +176,7 @@ SPAWN_TIME1 = 4000
 
 #T
 TIMEOUT_STEP = 100 #100ms
-TIMEOUT_LEVEL = 5000 #20s
+TIMEOUT_LEVEL = 3000 #20s
 #TIMEOUT_LEVEL2 = 30000 #30s
 #TIMEOUT_LEVEL3 = 40000 #40s
 
@@ -204,7 +187,7 @@ WIN_HEIGHT = 484
 
 # S
 SCORE_POS = {'TITLE': (WIN_WIDTH / 2, 90),
-             'ENTER NAME': (WIN_WIDTH / 2, 110),
+             'ENTER NAME': (WIN_WIDTH / 2, 120),
              'LABEL': (WIN_WIDTH / 2,140),
              'NAME': (WIN_WIDTH / 2, 170),
              0: (WIN_WIDTH / 2, 170),
