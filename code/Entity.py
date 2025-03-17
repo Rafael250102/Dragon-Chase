@@ -1,6 +1,6 @@
 import pygame
 from abc import ABC, abstractmethod
-from code.Const import ENTITY_HEALTH, ENTITY_DAMAGE, ENTITY_SCORE
+from code.Const import ENTITY_HEALTH, ENTITY_DAMAGE, ENTITY_SCORE, ENTITY_SPEED
 
 
 class Entity(ABC):
