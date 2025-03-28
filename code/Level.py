@@ -50,7 +50,7 @@ class Level:
                 if ent.name == 'Player1':
                     self.level_text(20, f'PLAYER 1 - HEALTH: {ent.health} | SCORE: {ent.score}', C_GREEN, (10, 25))
                 if ent.name == 'Player2':
-                        self.level_text(20, f'PLAYER 2 - HEALTH: {ent.health} | SCORE: {ent.score}', C_CYAN, (10, 40))
+                    self.level_text(20, f'PLAYER 2 - HEALTH: {ent.health} | SCORE: {ent.score}', C_CYAN, (10, 40))
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -80,6 +80,8 @@ class Level:
             self.level_text(25, f'{self.name} - Timeout: {self.timeout / 1000 :.1f}s', C_WHITE, (10, 5))
             self.level_text(25, f'FPS: {clock.get_fps() :.0f}', C_WHITE, (10, WIN_HEIGHT - 35))
             self.level_text(25,f'ENTIDADES: {len(self.entity_list)}', C_WHITE, (10, WIN_HEIGHT - 20))
+            self.level_text(25, f'Press ESC to Pause', C_WHITE, (760, 5))
+            self.level_text(25, f'Press ENTER to Return', C_WHITE, (730, 20))
             pygame.display.flip()
             #Collisions
             EntityMediator.verify_collision(entity_list=self.entity_list)

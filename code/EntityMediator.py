@@ -5,7 +5,6 @@ from code.Player import Player
 from code.EnemyShot import EnemyShot
 from code.Enemy import Enemy
 
-
 class EntityMediator:
 
     @staticmethod

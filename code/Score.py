@@ -19,15 +19,15 @@ class Score:
     def save(self, game_mode: str, player_score: list[int]):
         pygame.mixer_music.load('./asset/Score.mp3')
         pygame.mixer_music.play(-1)
-       #self.window.blit(source=self.surf, dest=self.rect)
         db_proxy = DBProxy('DBScore')
         name = ''
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.score_text(55, 'YOU WIN!', C_ORANGE, SCORE_POS['TITLE'])
+            score = player_score[0]
+            text = 'INSERT PLAYER 1 NAME (4 CHARACTERS):'
             if game_mode == MENU_OPTION[0]:
                 score = player_score[0]
-                text = 'INSERT PLAYER 1 NAME (4 CHARACTERS):'
             if game_mode == MENU_OPTION[1]:
                 score = (player_score[0] + player_score[1]) / 2
                 text = 'INSERT TEAM NAME (4 CHARACTERS):'

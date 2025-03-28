@@ -5,7 +5,6 @@ from code.Const import WIN_WIDTH, WIN_HEIGHT
 from code.Player import Player
 from code.Enemy import Enemy
 
-
 class EntityFactory:
 
     @staticmethod

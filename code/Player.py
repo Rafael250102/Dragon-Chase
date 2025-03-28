@@ -4,8 +4,6 @@ from code.Entity import Entity
 from code.PlayerShot import PlayerShot
 from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, PLAYER_KEY_UP, PLAYER_KEY_DOWN, PLAYER_KEY_LEFT, \
     PLAYER_KEY_RIGHT, PLAYER_KEY_SHOOT, ENTITY_SHOT_DELAY, ENTITY_HEALTH
-from pygame.examples.sprite_texture import running
-
 
 class Player(Entity):
 
@@ -35,7 +33,8 @@ class Player(Entity):
             if pressed_key[PLAYER_KEY_SHOOT[self.name]]:
                 return PlayerShot(name=f'{self.name}Shot', position=(self.rect.centerx, self.rect.centery))
 
-    def pause_game(self): # Menu Pause
+    @staticmethod
+    def pause_game(): # Menu Pause
         is_paused = True
         while is_paused:
             for event in pygame.event.get():

@@ -2,7 +2,6 @@ import pygame
 from abc import ABC, abstractmethod
 from code.Const import ENTITY_HEALTH, ENTITY_DAMAGE, ENTITY_SCORE, ENTITY_SPEED
 
-
 class Entity(ABC):
 
     def __init__(self, name: str, position: tuple):
