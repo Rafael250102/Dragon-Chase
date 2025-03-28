@@ -19,8 +19,8 @@ class Menu:
         while True:
             # Draw Images
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(100, "Dragon", C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 140))
-            self.menu_text(100, "Chase", C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 200))
+            self.menu_text(100, "Rise of the", C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 140))
+            self.menu_text(100, "Dragons", C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 200))
 
             for i in range (len(MENU_OPTION)):
                 if i == menu_option:
