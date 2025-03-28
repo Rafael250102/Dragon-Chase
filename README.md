@@ -1,4 +1,5 @@
-# Rise of The Dragons
+![alt text](https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player1.png) #  Rise of The Dragons ![alt text](
+https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player2.png)
 
 
 ### About
