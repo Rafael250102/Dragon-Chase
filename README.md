@@ -1,4 +1,4 @@
-![alt text](https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player1.png) # Rise of the Dragons ![alt text](https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player2.png)
+![alt text](https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player1.png) Rise of the Dragons ![alt text](https://github.com/Rafael250102/RiseOfTheDragons/blob/master/asset/Player2.png)
 ========================
 
 
